@@ -10,6 +10,7 @@
     <modules>
         <module>coupon-eureka</module>
         <module>coupon-gateway</module>
+        <module>coupon-service</module>
     </modules>
 
     <name>imooc-coupon</name>

@@ -31,6 +31,7 @@ public class AccessLogFilter extends AbstractPostZuulFilter {
      *
      * @return the int order of a filter
      */
+    //在所有过滤器执行完再执行
     @Override
     public int filterOrder() {
         return FilterConstants.SEND_RESPONSE_FILTER_ORDER - 1;
