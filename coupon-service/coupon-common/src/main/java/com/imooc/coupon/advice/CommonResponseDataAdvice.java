@@ -43,6 +43,8 @@ public class CommonResponseDataAdvice implements ResponseBodyAdvice<Object> {
         return true;
     }
 
+
+
     /**
      * <h2>响应返回之前的处理</h2>
      * */
@@ -60,7 +62,7 @@ public class CommonResponseDataAdvice implements ResponseBodyAdvice<Object> {
                 0, ""
         );
 
-        // 如果 o 是 null, response 不需要设置 data
+        // 如果 o 是 null（controller返回的data为空）, response 不需要设置 data
         if (null == o) {
             return response;
             // 如果 o 已经是 CommonResponse, 不需要再次处理

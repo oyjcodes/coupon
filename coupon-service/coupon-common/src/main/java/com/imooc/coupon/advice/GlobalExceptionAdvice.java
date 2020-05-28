@@ -15,7 +15,7 @@ import javax.servlet.http.HttpServletRequest;
 public class GlobalExceptionAdvice {
 
     /**
-     * <h2>对 CouponException 进行统一处理</h2>
+     * <h2>ExceptionHandler可以对指定的异常进行拦截，这里对 CouponException 进行统一处理</h2>
      * */
     @ExceptionHandler(value = CouponException.class)
     public CommonResponse<String> handlerCouponException(

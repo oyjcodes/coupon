@@ -15,9 +15,9 @@ import java.io.Serializable;
 @AllArgsConstructor
 public class CommonResponse<T> implements Serializable {
 
-    private Integer code;
-    private String message;
-    private T data;
+    private Integer code;//状态码
+    private String message;//状态信息
+    private T data;//响应数据
 
     public CommonResponse(Integer code, String message) {
 
