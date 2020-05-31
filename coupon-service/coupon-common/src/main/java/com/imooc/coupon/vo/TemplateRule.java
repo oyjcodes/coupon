@@ -7,7 +7,7 @@ import lombok.NoArgsConstructor;
 import org.apache.commons.lang3.StringUtils;
 
 /**
- * <h1>优惠券规则对象定义</h1>
+ * <h1>优惠券规则对象定义，最后会以json的格式保存到数据表记录中</h1>
  * Created by oyj.
  */
 @Data
@@ -40,8 +40,10 @@ public class TemplateRule {
                 && StringUtils.isNotEmpty(weight);
     }
 
+
+
     /**
-     * <h2>有效期限规则</h2>
+     * <h2>有效期限规则，需要与PeriodType类型配合决定</h2>
      * */
     @Data
     @NoArgsConstructor
@@ -64,7 +66,7 @@ public class TemplateRule {
     }
 
     /**
-     * <h2>折扣, 需要与类型配合决定</h2>
+     * <h2>折扣, 需要与CouponCategory类型配合决定</h2>
      * */
     @Data
     @NoArgsConstructor
