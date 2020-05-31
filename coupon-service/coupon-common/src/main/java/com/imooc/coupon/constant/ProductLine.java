@@ -7,7 +7,7 @@ import java.util.Objects;
 import java.util.stream.Stream;
 
 /**
- * <h1>产品线枚举</h1>
+ * <h1>产品线枚举，在一个公司内部不同的产品线一般都有自己的优惠券模板（可通用也可不通用）</h1>
  * Created by oyj.
  */
 @Getter
