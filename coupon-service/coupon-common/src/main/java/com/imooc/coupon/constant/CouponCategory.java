@@ -24,10 +24,13 @@ public enum CouponCategory {
     /** 优惠券分类编码 */
     private String code;
 
+    //通过code返回对应的枚举信息
     public static CouponCategory of(String code) {
 
+        //code不允许为空，否则会抛出异常
         Objects.requireNonNull(code);
 
+        //jdk8lamda表达式，将枚举数组values()转化为Stream流类型，通过lamda表达式获取想要的内容
         return Stream.of(values())
                 .filter(bean -> bean.code.equals(code))
                 .findAny()
