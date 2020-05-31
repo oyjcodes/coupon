@@ -11,9 +11,12 @@
 
     <artifactId>imooc-coupon-service</artifactId>
     <packaging>pom</packaging>
+
     <modules>
         <module>coupon-common</module>
+        <module>coupon-template</module>
     </modules>
+
 
 
 </project>
