@@ -7,7 +7,7 @@ import java.util.List;
 
 /**
  * <h1>CouponTemplate Dao 接口定义</h1>
- * Created by Qinyi.
+ * Created by oyj.
  */
 public interface CouponTemplateDao
         extends JpaRepository<CouponTemplate, Integer> {
