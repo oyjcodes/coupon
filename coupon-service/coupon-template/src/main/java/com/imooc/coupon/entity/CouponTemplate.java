@@ -30,14 +30,14 @@ import java.util.Date;
 
 /**
  * <h1>优惠券模板实体类定义: 基础属性 + 规则属性</h1>
- * Created by Qinyi.
+ * Created by oyj.
  */
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Entity
-@EntityListeners(AuditingEntityListener.class)
-@Table(name = "coupon_template")
+@Entity //指定为一个数据表的实体类
+@EntityListeners(AuditingEntityListener.class)//有一个列可以用到这个进行自动的赋值
+@Table(name = "coupon_template") //映射的具体数据表
 @JsonSerialize(using = CouponTemplateSerialize.class)
 public class CouponTemplate implements Serializable {
 
@@ -69,7 +69,7 @@ public class CouponTemplate implements Serializable {
 
     /** 优惠券分类 */
     @Column(name = "category", nullable = false)
-    @Convert(converter = CouponCategoryConverter.class)
+    @Convert(converter = CouponCategoryConverter.class)//依据自定义转化器，从枚举中取得相应的code
     private CouponCategory category;
 
     /** 产品线 */
@@ -82,7 +82,7 @@ public class CouponTemplate implements Serializable {
     private Integer count;
 
     /** 创建时间 */
-    @CreatedDate
+    @CreatedDate  //使用该注解主动填充该属性
     @Column(name = "create_time", nullable = false)
     private Date createTime;
 
